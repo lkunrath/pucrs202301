@@ -1,5 +1,3 @@
-package aula24_grafos_valorado;
-
 import java.util.ArrayList;
 
 public class GrafoValorado {
@@ -7,9 +5,9 @@ public class GrafoValorado {
     class Aresta {
         public int v;
         public int w;
-        public int peso;
+        public double peso;
 
-        public Aresta(int v, int w, int peso) {
+        public Aresta(int v, int w, double peso) {
             this.v = v;
             this.w = w;
             this.peso = peso;
@@ -27,7 +25,7 @@ public class GrafoValorado {
         }
     }
 
-    public void adicionarAresta(int v, int w, int peso) {
+    public void adicionarAresta(int v, int w, double peso) {
         Aresta e1 = new Aresta(v, w, peso);
         listaAdjacencia[v].add(e1);
 
@@ -55,29 +53,19 @@ public class GrafoValorado {
         return resultado;
     }
 
-    public static void main(String[] args) {
-        GrafoValorado g = new GrafoValorado(4);
-        g.adicionarAresta(0, 1, 33);
-        g.adicionarAresta(0, 2, 10);
-        g.adicionarAresta(1, 2, 99);
-        g.adicionarAresta(0, 3, 200);
-
-        System.out.println(g.toDot());
-    }
-
     public void removerAresta(int v, int w) {
-          for (Aresta a : listaAdjacencia[v]){
-            if(a.w == w)
-            listaAdjacencia[v].remove(a);
+        for (Aresta a : listaAdjacencia[v]) {
+            if (a.w == w)
+                listaAdjacencia[v].remove(a);
         }
-        for (Aresta a : listaAdjacencia[w]){
-            if(a.v == v)
-            listaAdjacencia[w].remove(a);
+        for (Aresta a : listaAdjacencia[w]) {
+            if (a.v == v)
+                listaAdjacencia[w].remove(a);
         }
     }
 
     public int grau(int vertice) {
-        return listaAdjacencia[v].size();
+        return listaAdjacencia[vertice].size();
     }
 
     public int numeroVertices() {
@@ -86,7 +74,7 @@ public class GrafoValorado {
 
     public int numeroArestas() {
         int numeroArestas = 0;
-        for (int i = 0; i < listaAdjacencia.length-1; i++) {
+        for (int i = 0; i < listaAdjacencia.length - 1; i++) {
             numeroArestas += listaAdjacencia[i].size();
         }
         return numeroArestas;
