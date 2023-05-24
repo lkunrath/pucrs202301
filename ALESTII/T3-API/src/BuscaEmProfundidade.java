@@ -1,5 +1,3 @@
-package aula24_grafos_valorado;
-
 public class BuscaEmProfundidade {
     private boolean[] visitados;
     private int[] antecessor;
