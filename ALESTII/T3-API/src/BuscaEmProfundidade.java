@@ -1,7 +1,3 @@
-package aula24_grafos_valorado;
-
-import aula24_grafos_valorado.GrafoValorado.Aresta;
-
 public class BuscaEmProfundidade {
     private boolean[] visitados;
     private int[] antecessor;
