@@ -1,5 +1,3 @@
-import aula24_grafos_valorado.BuscaEmProfundidade;
-
 public class App {
     public static void main(String[] args) throws Exception {
       GrafoValorado g = new GrafoValorado(4);

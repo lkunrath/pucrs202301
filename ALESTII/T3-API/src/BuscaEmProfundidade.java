@@ -13,7 +13,7 @@ public class BuscaEmProfundidade {
 
         for (int i = 0; i < numeroVertices; i++) {
             visitados[i] = false;
-            antecessor = -1;
+            antecessor[i] = -1;
         }
         profundidade(g, verticeOrigem);        
     }
@@ -30,14 +30,14 @@ public class BuscaEmProfundidade {
                 profundidade(g, verticeAdjacente);
             }
         }
-        posordem = verticeOrigem;
+        posordem[verticeOrigem] = verticeOrigem;
     }
 
     public void imprimirResultado() {
         for (int i = 0; i < visitados.length; i++) {
             System.out.println("BUSCA EM PROFUNDIDADE");
             System.out.println("=====================\n");
-            System.out.printf("Vertice: %d\nVisitados: %b\nAntecessor: %d\nPré-Ordem: %d\nPós-Ordem: %d\n--------------");
+            System.out.printf("Vertice: %d\nVisitados: %b\nAntecessor: %d\nPré-Ordem: %d\nPós-Ordem: %d\n--------------\n", i, visitados[i], antecessor[i], preordem[i], posordem[i]);
         }
     }
 }
