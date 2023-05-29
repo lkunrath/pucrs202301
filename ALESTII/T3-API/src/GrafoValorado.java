@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class GrafoValorado {
 
-    class Aresta {
+    public static class Aresta {
         public int v;
         public int w;
         public double peso;
@@ -16,6 +16,7 @@ public class GrafoValorado {
 
     private ArrayList<Aresta> listaAdjacencia[];
     private int numeroVertices;
+    private int nome = 0;
 
     public GrafoValorado(int numeroVertices) {
         this.numeroVertices = numeroVertices;
@@ -78,5 +79,11 @@ public class GrafoValorado {
             numeroArestas += listaAdjacencia[i].size();
         }
         return numeroArestas;
+    }
+
+    public String getNome(){
+        String str = "Grafo" + nome;
+        nome = nome + 1;
+        return str;
     }
 }

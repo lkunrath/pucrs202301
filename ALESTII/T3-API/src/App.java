@@ -1,12 +1,17 @@
 public class App {
-    public static void main(String[] args) throws Exception {
-      GrafoValorado g = new GrafoValorado(4);
-      g.adicionarAresta(0, 1, 33);
-      g.adicionarAresta(0, 2, 10);
-      g.adicionarAresta(1, 2, 99);
-      g.adicionarAresta(0, 3, 200);
-        
-      String caminhoArquivo = "src/grafo.txt";
-      GrafoArquivo.lerArquivoGrafo(caminhoArquivo);
-    }
+  public static void main(String[] args) throws Exception {
+    GrafoValorado g = new GrafoValorado(4);
+    g.adicionarAresta(0, 1, 33);
+    g.adicionarAresta(0, 2, 10);
+    g.adicionarAresta(1, 2, 99);
+    g.adicionarAresta(0, 3, 200);
+
+    //String caminhoSalvaArquivo = "C:/Users/lkunr/OneDrive - PUCRS - BR/3º Semestre/pucrs202301/ALESTII/T3-API/files/" + g.getNome();
+    
+    //GrafoArquivo.salvarArquivoGrafo(g, caminhoSalvaArquivo);
+    
+    //String caminhoLeArquivo = "read_files/grafo.txt";
+
+    // GrafoArquivo.lerArquivoGrafo(caminhoLeArquivo);
+  }
 }
