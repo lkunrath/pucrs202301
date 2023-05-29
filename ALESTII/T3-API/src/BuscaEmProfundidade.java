@@ -1,3 +1,4 @@
+
 public class BuscaEmProfundidade {
     private boolean[] visitados;
     private int[] antecessor;
@@ -22,7 +23,7 @@ public class BuscaEmProfundidade {
         visitados[verticeOrigem] = true;
         preordem[verticeOrigem] = verticeOrigem;
 
-        for (Aresta a : g.getListaAdjacencia(verticeOrigem)) {
+        for (GrafoValorado.Aresta a : g.getListaAdjacencia(verticeOrigem)) {
             int verticeAdjacente = a.v;
 
             if(!visitados[verticeAdjacente]){

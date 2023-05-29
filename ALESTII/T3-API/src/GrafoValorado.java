@@ -54,6 +54,10 @@ public class GrafoValorado {
         return resultado;
     }
 
+    public ArrayList<Aresta> getListaAdjacencia(int vertice) {
+        return listaAdjacencia[vertice];
+    }
+    
     public void removerAresta(int v, int w) {
         for (Aresta a : listaAdjacencia[v]) {
             if (a.w == w)
