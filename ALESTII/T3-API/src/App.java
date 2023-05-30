@@ -12,6 +12,12 @@ public class App {
     
     //String caminhoLeArquivo = "read_files/grafo.txt";
 
-    // GrafoArquivo.lerArquivoGrafo(caminhoLeArquivo);
+    //GrafoArquivo.lerArquivoGrafo(caminhoLeArquivo);
+
+    //BuscaEmProfundidade buscaProfundidade = new BuscaEmProfundidade(g, 0);
+    //buscaProfundidade.imprimirResultado();
+
+    //BuscaEmLargura buscaLargura = new BuscaEmLargura(g, 0);
+    //buscaLargura.imprimirResultado();
   }
 }
