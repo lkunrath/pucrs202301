@@ -6,9 +6,9 @@ public class App {
     g.adicionarAresta(1, 2, 99);
     g.adicionarAresta(0, 3, 200);
 
-    //String caminhoSalvaArquivo = "C:/Users/lkunr/OneDrive - PUCRS - BR/3º Semestre/pucrs202301/ALESTII/T3-API/files/" + g.getNome();
+    String caminhoSalvaArquivo = "C:/Users/lkunr/OneDrive - PUCRS - BR/3º Semestre/pucrs202301/ALESTII/T3-API/saved_files/" + g.getNome();
     
-    //GrafoArquivo.salvarArquivoGrafo(g, caminhoSalvaArquivo);
+    GrafoArquivo.salvarArquivoGrafo(g, caminhoSalvaArquivo);
     
     //String caminhoLeArquivo = "read_files/grafo.txt";
 
