@@ -10,7 +10,6 @@ public class FilaPrioridadeMinima {
             this.vertice = vertice;
             this.distancia = distancia;
         }
-
     }
 
     private ArrayList<Nodo> itens = new ArrayList<>();

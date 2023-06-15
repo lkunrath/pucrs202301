@@ -26,7 +26,4 @@ public class Vertice {
     public char getCaracter() {
         return caracter;
     }
-
-    public void setIndice(int indiceVertice) {
-    }
 }
