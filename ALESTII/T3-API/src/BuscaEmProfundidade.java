@@ -3,7 +3,7 @@ public class BuscaEmProfundidade {
     private int[] antecessor;
     public int[] preordem;
     public int[] posordem;
-   
+
     public BuscaEmProfundidade(GrafoValorado g, int verticeOrigem) {
         int numeroVertices = g.numeroVertices();
         visitados = new boolean[numeroVertices];
@@ -15,17 +15,17 @@ public class BuscaEmProfundidade {
             visitados[i] = false;
             antecessor[i] = -1;
         }
-        profundidade(g, verticeOrigem);        
+        profundidade(g, verticeOrigem);
     }
 
-    public void profundidade(GrafoValorado g, int verticeOrigem){
+    public void profundidade(GrafoValorado g, int verticeOrigem) {
         visitados[verticeOrigem] = true;
         preordem[verticeOrigem] = verticeOrigem;
 
-        for (Aresta a : g.getListaAdjacencia(verticeOrigem)) {
+        for (GrafoValorado.Aresta a : g.getListaAdjacencia(verticeOrigem)) {
             int verticeAdjacente = a.v;
 
-            if(!visitados[verticeAdjacente]){
+            if (!visitados[verticeAdjacente]) {
                 antecessor[verticeAdjacente] = verticeOrigem;
                 profundidade(g, verticeAdjacente);
             }
@@ -35,9 +35,11 @@ public class BuscaEmProfundidade {
 
     public void imprimirResultado() {
         for (int i = 0; i < visitados.length; i++) {
-            System.out.println("BUSCA EM PROFUNDIDADE");
-            System.out.println("=====================\n");
-            System.out.printf("Vertice: %d\nVisitados: %b\nAntecessor: %d\nPré-Ordem: %d\nPós-Ordem: %d\n--------------\n", i, visitados[i], antecessor[i], preordem[i], posordem[i]);
+            System.out.println("\nBUSCA EM PROFUNDIDADE");
+            System.out.println("=====================");
+            System.out.printf(
+                    "Vertice: %d\nVisitados: %b\nAntecessor: %d\nPré-Ordem: %d\nPós-Ordem: %d\n--------------\n", i,
+                    visitados[i], antecessor[i], preordem[i], posordem[i]);
         }
     }
 }
